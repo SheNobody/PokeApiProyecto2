@@ -12,11 +12,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".DetalleTipo"></activity>
         <activity android:name=".DetallePokemon" />
-        <activity android:name=".HomeActivity" />
         <activity android:name=".SplashActivity" />
         <activity android:name=".data.Type" />
         <activity android:name=".data.Pokemon" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

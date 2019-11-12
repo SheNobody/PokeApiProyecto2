@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.pokeapiproyecto.adapter.PokemonItemListener;
+import com.example.pokeapiproyecto.data.Pokemon;
 import com.example.pokeapiproyecto.data.PokemonShort;
 
 import org.json.JSONArray;
@@ -16,14 +18,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements PokemonItemListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
-
 
     private List<PokemonShort> parsePokemonList(String jsonStr) {
         try {
@@ -42,4 +43,8 @@ public class HomeActivity extends AppCompatActivity {
         return null;
     }
 
+    @Override
+    public void onPokemonClicked(int position) {
+
     }
+}
